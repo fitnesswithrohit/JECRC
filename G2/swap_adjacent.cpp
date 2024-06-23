@@ -2,7 +2,7 @@
 using namespace std;
 
 void swap_adjacent(int arr[], int n){
-    for(int i=0;i<n;i+=2){
+    for(int i=0;i<n-1;i+=2){
         swap(arr[i], arr[i+1]);
     }
 }
@@ -31,11 +31,11 @@ int main(){
 
 
     return 0;
-    0 1 2 3 4 5 
-    2 3 4 5 6 7
-    i=0 2 
-    i=1 3
-    3 2 4 5 6 7
+    // 0 1 2 3 4 5 
+    // 2 3 4 5 6 7
+    // i=0 2 
+    // i=1 3
+    // 3 2 4 5 6 7
     // i=2 4
     // i=3 5
     // i++

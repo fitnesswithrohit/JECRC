@@ -1,25 +1,21 @@
-// reverse an array
-
-#include<bits/stdc++.h>
+// reverse an array 
+#include<iostream>
 using namespace std;
 
-// int reverse_array(int arr[], int n){
-//     int j=n-1;
-//     for(int i=0;i<n/2;i++){
-//         // swap(arr[i], arr[j]);
-//         int a = 
-//         j--;
-//     }
-
-//     for(int i=0;i<n;i++){
-//         cout<<arr[i]<<" ";
-//     }
-//     return 0;
-// }
+void reverse_array(int arr[], int n){
+    int j=n-1;
+    for(int i=0;i<n/2;i++){
+        // swap(arr[i], arr[j]);
+        int a = arr[i];
+        arr[i] = arr[j];
+        arr[j] = a;
+        j--;
+    }
+}
 
 void print(int arr[], int n){
     for(int i=0;i<n;i++){
-        cout << arr[i]<< " ";
+        cout<<arr[i]<<" ";
     }
     cout<<endl;
 }
@@ -27,23 +23,34 @@ void print(int arr[], int n){
 int main(){
     int n;
     cin>>n;
-    int sol[n];
+    int arr[n];
     for(int i=0;i<n;i++){
-        cin >> sol[i];
+        cin>>arr[i];
     }
-    int arr[6] = {2,3,12,4,7,10};
-    // cout << "original array: ";
-    // print(arr, 6);
-    reverse(sol, sol+n);
-    print(sol,n);
-//    reverse_array(arr,6);
-    return 0;
-}
+    // int arr[6] = {2,3,4,5,6,7};
 
-// arr[0] = 2 //given
-// arr[5] = 10 // given
-// int a = arr[0] = 2;
-// arr[0] = arr[5];
-// arr[0] = 10; //new
-// arr[5] = a;
-// arr[5] = 2;
+
+    cout<<"origina array: ";
+    print(arr,n);
+
+    reverse_array(arr, n);
+    cout<<"after reverse: ";
+    // reverse(arr,arr+n);
+    print(arr,n);
+    // 2 3 4 5 6 7
+    // i=0 j=5
+    // 7 3 4 5 6 2
+    // i=1 j=4
+    // 7 6 4 5 3 2
+    // i=2 j=3
+    // 7 6 5 4 3 2
+    // i=3 j=2
+    // 7 6 4 5 3 2
+    // i=4 j=2
+    // 7 3 4 5 6 2
+    // i=5 j=0
+    // 2 3 4 5 6 7
+
+    // 7 6 5 4 3 2
+
+}

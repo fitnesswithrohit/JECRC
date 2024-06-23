@@ -19,12 +19,12 @@ int second_largest(int arr[], int n){
         }
     }
 
-    2 3 4 1 2 6
-    first_large = 6
-    iterate 
-    i=0 second = 2 (2 > INT_MIN)
-    i=1 second = 3 (3 > 2)
-    i=2 second = 4 (4 > 3)
+    // 2 3 4 1 2 6
+    // first_large = 6
+    // iterate 
+    // i=0 second = 2 (2 > INT_MIN)
+    // i=1 second = 3 (3 > 2)
+    // i=2 second = 4 (4 > 3)
 
 
     return second;

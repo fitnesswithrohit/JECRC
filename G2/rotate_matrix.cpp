@@ -1,4 +1,3 @@
-//Rotate matrix clockwise by 90 degree
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,24 +13,22 @@ void print(vector<vector<int> > matrix, int n)
     }
 }
 
-// Method-2
-// void rotate_matrix(vector<vector<int> > &matrix, int n)
-// {
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = 0; j < i; j++)
-    //     {
-    //         swap(matrix[i][j], matrix[j][i]);
-    //     }
-    // }
+void rotate_matrix(vector<vector<int> > &matrix, int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            swap(matrix[i][j], matrix[j][i]);
+        }
+    }
 
-//     for (int i = 0; i < n; i++)
-//     {
-//         reverse(matrix[i].begin(), matrix[i].end());
-//     }
-// }
-
-// transpose of a matrix
+    for (int i = 0; i < n; i++)
+    {
+        reverse(matrix[i].begin(), matrix[i].end());
+    }
+}
+//transpose of matrix
 // void rotate_matrix(vector<vector<int> > &matrix, int n)
 // {
 //     int rows=matrix.size();
@@ -46,19 +43,17 @@ void print(vector<vector<int> > matrix, int n)
 //     return ans;
 // }
 
+// void rotate_matrix(vector<vector<int> > &matrix, int n){
+//     vector<vector<int> > rotate(n,vector<int>(n,0));
 
-// Method-1
-void rotate_matrix(vector<vector<int> > &matrix, int n){
-    vector<vector<int> > rotate(n,vector<int>(n,0));
-
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            rotate[i][n-j-1] = matrix[j][i];
-        }
-    }
-    // print(rotate,n);
-    matrix = rotate;
-}
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<n;j++){
+//             rotate[i][n-j-1] = matrix[j][i];
+//         }
+//     }
+//     // print(rotate,n);
+//     matrix = rotate;
+// }
 
 int main()
 {
